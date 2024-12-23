@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Maybe?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f8b5e5, #ffe5e1);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        .container h1 {
+            color: #ff6f91;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .container p {
+            color: #555;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .image {
+            margin: 20px 0;
+        }
+        .image img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%;
+            border: 2px solid #ff6f91;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff6f91;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button a:hover {
+            background-color: #ff5069;
+            transform: scale(1.05);
+        }
+        .no-button {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            background-color: #999;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .no-button:hover {
+            transform: translate(20px, 20px);
+        }
+    </style>
+    <script>
+        function no() {
+            const noButton = document.querySelector('.no-button');
+            const container = document.querySelector('.container');
+            const rect = container.getBoundingClientRect();
+            const randomX = Math.random() * (rect.width - 100); // Ensures button stays within container
+            const randomY = Math.random() * (rect.height - 100);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Call, Maybe?</h1>
+        <p>It's been a while! I miss you a littleee(miss talking to you).</p>
+        <div class="image">
+            <img src="https://th.bing.com/th?id=OIP.O2VRcIpeGTRPR4LjIX8IXwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="A special memory">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.kBXuaZE8VLnMAL_9rBNjjgHaHd?w=200&h=202&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Cherished moment">
+        </div>
+        <p>If you still need time or Space, I totally get it. No pressure!</p>
+        <p>Take care</p>
+        <p>Yours,</p>
+        <p><strong>Shilpa</strong></p>
+        <div class="button">
+            <a href="iloveyou.html">Yes, let's chat</a>
+            <a href="#" class="no-button" onclick="no()">Maybe later</a>
+        </div>
+    </div>
+</body>
+</html>
